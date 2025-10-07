@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring REST Demo</title>
+</head>
+<body>
+<h1>Mi API Spring Boot</h1>
+
+<button id="mensajeBtn">Obtener mensaje</button>
+<p id="mensaje"></p>
+
+<button id="horaBtn">Ver hora</button>
+<p id="hora"></p>
+
+<h3>Sumar</h3>
+<input id="a" type="number" placeholder="a">
+<input id="b" type="number" placeholder="b">
+<button id="sumarBtn">Sumar</button>
+<p id="resultado"></p>
+
+<script>
+    document.getElementById("mensajeBtn").addEventListener("click", async () => {
+      const res = await fetch("http://localhost:8080/mensaje");
+      document.getElementById("mensaje").textContent = await res.text();
+    });
+
+    document.getElementById("horaBtn").addEventListener("click", async () => {
+      const res = await fetch("http://localhost:8080/hora");
+      document.getElementById("hora").textContent = await res.text();
+    });
+
+    document.getElementById("sumarBtn").addEventListener("click", async () => {
+      const a = document.getElementById("a").value;
+      const b = document.getElementById("b").value;
+      const res = await fetch(`http://localhost:8080/sumar?a=${a}&b=${b}`);
+      document.getElementById("resultado").textContent = await res.text();
+    });
+</script>
+</body>
+</html>

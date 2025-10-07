@@ -1,0 +1,46 @@
+# ------------------------------
+# Backend (Spring Boot)
+# ------------------------------
+
+# Directorios de compilación
+complete/target/
+complete/build/
+
+# Archivos de IDE
+complete/.idea/
+complete/*.iml
+complete/*.ipr
+complete/*.iws
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración y logs
+complete/*.log
+complete/*.class
+
+# Maven Wrapper
+complete/.mvn/wrapper/maven-wrapper.jar
+complete/.mvn/wrapper/maven-wrapper.properties
+
+# Gradle Wrapper
+complete/gradle/wrapper/gradle-wrapper.jar
+complete/gradle/wrapper/gradle-wrapper.properties
+
+# ------------------------------
+# Frontend (React / Node.js)
+# ------------------------------
+
+# Dependencias de Node
+spring-frontend/node_modules/
+
+# Archivos de producción compilados
+spring-frontend/build/
+
+# Configuración local
+spring-frontend/.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
